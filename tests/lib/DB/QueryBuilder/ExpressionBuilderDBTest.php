@@ -212,7 +212,7 @@ class ExpressionBuilderDBTest extends TestCase {
 			$this->connection->getQueryBuilder()->delete('testing')->executeStatement();
 		}
 
-		$prefix = Server::get(IConfig::class)->getSystemValueString('dbtableprefix', 'oc_');
+		$prefix = Server::get(IConfig::class)->getSystemValueString('dbtableprefix', 'nc_');
 		$schema = $this->connection->createSchema();
 		try {
 			$schema->getTable($prefix . 'testing');
